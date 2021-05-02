@@ -1,0 +1,64 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/ess_favicon_32x32.png' %}">
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'bundle.css' %}">
+
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+
+<body>
+    {% wagtailuserbar %}
+
+    {% include 'navbar.html' %}
+
+    <section class="hero is-primary has-background">
+        <img alt="Fill Murray" class="hero-background is-transparent"
+            src="https://www.sfz-aichach.de/images/Bilder-Beitraege/schule.jpg" />
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Herzlich Willkommen
+                </h1>
+                <h3 class="subtitle">
+                    auf den Seiten der Edith-Stein-Schule
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    {% block content %}{% endblock %}
+
+    {# Global javascript #}
+    <script type="text/javascript" src="{% static 'bundle.js' %}"></script>
+
+    {% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+    {% endblock %}
+</body>
+
+</html>
