@@ -1,10 +1,14 @@
 from .base import *
 
+# Base URL to use when referring to full URLs within the Wagtail admin backend -
+# e.g. in notification emails. Don't include '/admin' or a trailing slash
+BASE_URL = 'http://localhost'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3i04abbzn$@q)2t=u_j^g%ia@c!$k$o0*!(g9s!51w6s$kkci0'
+SECRET_KEY = 'top_secret'
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ['*'] 
