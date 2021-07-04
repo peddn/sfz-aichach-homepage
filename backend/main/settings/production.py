@@ -6,6 +6,10 @@ BASE_URL = 'http://edith-stein-schule.net'
 
 DEBUG = False
 
+SECRET_KEY = 'top_secret'
+
+ALLOWED_HOSTS = ['localhost'] 
+
 try:
     from .local import *
 except ImportError:
