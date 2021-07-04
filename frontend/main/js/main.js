@@ -1,3 +1,3 @@
 require('../scss/main.scss');
 
-console.log("Hello Wagtail!");
+console.log("Hello from main!");

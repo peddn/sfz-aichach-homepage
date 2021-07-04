@@ -7,8 +7,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     // https://stackoverflow.com/questions/35903246/how-to-create-multiple-output-paths-in-webpack-config
     entry: {
-        'main/static/bundle': './main/js/main.js',
-        'home/static/bundle': './home/js/main.js'
+        'main/static/bundle_main': './main/js/main.js',
+        'home/static/bundle_home': './home/js/main.js'
     },
     output: {
         path: path.resolve(__dirname, '../backend'),
