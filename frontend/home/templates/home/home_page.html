@@ -9,6 +9,8 @@
 {% endblock extra_css %}
 
 {% block content %}
+
+{% if page.show_actual %}
 <section class="section">
     <div class="container">
         <div class="hero is-warning">
@@ -20,6 +22,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 <section class="section">
     <div class="container">
