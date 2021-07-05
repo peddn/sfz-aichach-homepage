@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+{% block body_class %}template-content{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'bundle_content.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        {{ page.body|richtext }}
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'bundle_content.js' %}"></script>
+{% endblock extra_js %}

@@ -8,7 +8,8 @@ module.exports = {
     // https://stackoverflow.com/questions/35903246/how-to-create-multiple-output-paths-in-webpack-config
     entry: {
         'main/static/bundle_main': './main/js/main.js',
-        'home/static/bundle_home': './home/js/main.js'
+        'home/static/bundle_home': './home/js/main.js',
+        'content/static/bundle_content': './content/js/main.js'
     },
     output: {
         path: path.resolve(__dirname, '../backend'),
@@ -39,6 +40,8 @@ module.exports = {
                     'main/templates',
                     'home/static',
                     'home/templates',
+                    'content/static',
+                    'content/templates',
                     'search/templates'
                 ],
                 log: true,
@@ -55,6 +58,7 @@ module.exports = {
             patterns: [
                 { from: './main/templates', to: '../backend/main/templates', force: true },
                 { from: './home/templates', to: '../backend/home/templates', force: true },
+                { from: './content/templates', to: '../backend/content/templates', force: true },
                 { from: './search/templates', to: '../backend/search/templates', force: true },
                 {
                     from: './assets', to: '../backend/main/static/assets', force: true,
