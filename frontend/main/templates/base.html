@@ -32,21 +32,20 @@
 </head>
 
 <body>
+
     {% wagtailuserbar %}
 
-    {% include 'navbar.html' %}
-
-    <section class="hero is-primary has-background">
-        <img alt="Fill Murray" class="hero-background is-transparent"
-            src="https://www.sfz-aichach.de/images/Bilder-Beitraege/schule.jpg" />
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    Herzlich Willkommen
-                </h1>
-                <h3 class="subtitle">
-                    auf den Seiten der Edith-Stein-Schule
-                </h3>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-quarter is-flex is-flex-direction-column is-justify-content-space-between">
+                    <figure class="image is-2by1">
+                        <img src="{% static 'assets/img/ess_logo.svg' %}">
+                    </figure>
+                </div>
+                <div class="column is-flex is-flex-direction-column is-justify-content-space-between">
+                    {% include 'navbar.html' %}
+                </div>
             </div>
         </div>
     </section>
@@ -62,9 +61,7 @@
     {% block extra_js %}
     {# Override this in templates to add extra javascript #}
     {% endblock %}
+
 </body>
 
 </html>
-
-<span class="ion-ionic"></span>
-        

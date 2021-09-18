@@ -6,7 +6,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'bundle_home.css' %}">
-{% endblock extra_css %}
+{% endblock %}
 
 {% block content %}
 
@@ -24,17 +24,26 @@
 </section>
 {% endif %}
 
-<section class="section">
-    <div class="container">
-        {{ page.body|richtext }}
+<section class="section welcome">
+    <div class="container is-family-secondary">
+        <div class="columns">
+            <div class="column is-two-fifths">
+            </div>
+            <div class="column">
+                <h1 class="title has-text-white-ter">Herzlich Willkommen</h1>
+                <div class="content">
+                    {{ page.body|richtext }}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-{% endblock content %}
+{% endblock %}
 
 {% block extra_js %}
 <script type="text/javascript" src="{% static 'bundle_home.js' %}"></script>
-{% endblock extra_js %}
+{% endblock %}
 
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!

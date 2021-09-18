@@ -1,94 +1,41 @@
 {% load wagtailcore_tags %}
 {% load static %}
 
-<nav class="navbar is-info" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img src="{% static 'assets/img/ess_logo.png' %}" width="112" height="28">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="#">
-                    Unsere Schule
-                </a>
-                <a class="navbar-item" href="#">
-                    Schulprogramm
-                </a>
-                <a class="navbar-item" href="#">
-                    unser Angebot
-                </a>
-                <a class="navbar-item" href="#">
-                    für Erziehungsberechtigte
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Online-Dienste
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="https://mail.edith-stein-schule.net/SOGo">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <ion-icon name="mail" class="icon"></ion-icon>
-                                </span>
-                                <span>E-Mail</span>
-                            </span>
-                        </a>
-                        <a class="navbar-item" href="https://cloud.edith-stein-schule.net">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <ion-icon name="file-tray" class="icon"></ion-icon>
-                                </span>
-                                <span>Dateien</span>
-                            </span>
-                        </a>
-                        <a class="navbar-item" href="https://geraete.foerderzentrum-aichach.de">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <ion-icon name="desktop-outline" class="icon"></ion-icon>
-                                </span>
-                                <span>Geräte</span>
-                            </span>
-                        </a>
-                        <a class="navbar-item" href="#">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <ion-icon name="logo-mastodon" class="icon"></ion-icon>
-                                </span>
-                                <span>Social</span>
-                            </span>
-                        </a>
-                        <a class="navbar-item" href="#">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <ion-icon name="list" class="icon"></ion-icon>
-                                </span>
-                                <span>Aufgaben</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-light" href="/admin">
-                            Anmelden
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<nav class="navbar is-transparent mt-auto">
+    <div class="navbar-brand">
+      <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-</nav>
+  
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="https://bulma.io/">
+          Startseite
+        </a>
+        <a class="navbar-item" href="https://bulma.io/">
+            Aktuelles
+          </a>
+        <a class="navbar-item" href="https://bulma.io/">
+            Schulprogramm
+          </a>
+          <a class="navbar-item" href="https://bulma.io/">
+            Unser Angebot
+          </a>
+          <a class="navbar-item" href="https://bulma.io/">
+            Für Schüler
+          </a>
+          <a class="navbar-item" href="https://bulma.io/">
+            Service
+          </a>
+          <a class="navbar-item" href="https://bulma.io/">
+            Archiv
+          </a>
+          <a class="navbar-item" href="https://bulma.io/">
+            Intern
+          </a>
+      </div>
+    </div>
+  </nav>
