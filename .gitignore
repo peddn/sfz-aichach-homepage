@@ -140,3 +140,6 @@ backend/**/templates
 
 # sensitive information for production
 backend/main/settings/production.py
+
+# backend media directory
+backend/media

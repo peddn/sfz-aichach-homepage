@@ -16,28 +16,27 @@ $size-5: 1.25rem;
 $size-6: 1rem;
 $size-7: 0.75rem;
 
-$title-size: $size-1;
-$title-weight: 400;
-$title-family: "Hammersmith One", sans-serif;
+$title-size:      $size-1;
+$title-weight:    400;
+$title-family:    "Hammersmith One", sans-serif;
+$subtitle-family: $title-family;
 
 $footer-background-color: #fff;
 
-
 @import "~bulma/bulma";
 
+// wagtail wraps text in a <b> tag, when formatting it as bold.
 b {
     font-weight: $weight-bold;
 }
 
-// slanted edges here
+// styles for the Welcome Text
 .welcome {
 
     background: $edith-stein-rot;
     position: relative;
     z-index: 1;
     color: #fff;
-    margin: 15px 0;
-    padding: 15px;
 
     &:before,
     &:after {
@@ -63,5 +62,44 @@ b {
         transform: skewY(1.7deg);
         transform-origin: bottom left;
     }
-    
+
+}
+
+// dropshadow for Images
+.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    background: #fff;
+    padding: 1.5em;
+}
+
+// Content Styling (dark background)
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    @extend %headings !optional;
+}
+
+// custom list symbol
+.content ul {
+    list-style: none;
+    margin-left: 2.5em;
+}
+
+.content ul li:before
+{
+    content: '◇';
+    float: left;
+    margin-left: -1.5em;
+}
+
+// headings color
+.content > %headings {
+    color: #fff;
+    font-family: $title-family;
 }

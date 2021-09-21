@@ -9,6 +9,7 @@ module.exports = {
     entry: {
         'main/static/bundle_main': './main/js/main.js',
         'home/static/bundle_home': './home/js/main.js',
+        'blog/static/bundle_blog': './blog/js/main.js',
         'content/static/bundle_content': './content/js/main.js'
     },
     output: {
@@ -42,6 +43,8 @@ module.exports = {
                     'home/templates',
                     'content/static',
                     'content/templates',
+                    'blog/static',
+                    'blog/templates',
                     'search/templates'
                 ],
                 log: true,
@@ -59,6 +62,7 @@ module.exports = {
                 { from: './main/templates', to: '../backend/main/templates', force: true },
                 { from: './home/templates', to: '../backend/home/templates', force: true },
                 { from: './content/templates', to: '../backend/content/templates', force: true },
+                { from: './blog/templates', to: '../backend/blog/templates', force: true },
                 { from: './search/templates', to: '../backend/search/templates', force: true },
                 {
                     from: './assets', to: '../backend/main/static/assets', force: true,

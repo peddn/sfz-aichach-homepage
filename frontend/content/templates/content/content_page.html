@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
 {% load static %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-content{% endblock %}
 
@@ -9,14 +10,36 @@
 {% endblock %}
 
 {% block content %}
-
-<section class="section">
+<section class="section welcome">
     <div class="container is-family-secondary">
-        {{ page.body|richtext }}
+        <div class="columns">
+            <div class="column is-two-fifths">
+                {% if page.cover %}
+                <div class="polaroid">
+                    <figure class="image">
+                        {% image page.cover width-400 %}
+                    </figure>
+                </div>
+                {% endif %}
+            </div>
+            <div class="column">
+                <h1 class="title has-text-white-ter">
+                    {% if page.show_heading %}
+                        {{ page.heading }}
+                    {% endif %}
+                </h1>
+                <h2 class="subtitle has-text-white-ter pb-4">
+                    {% if page.show_subheading %}
+                        {{ page.subheading }}
+                    {% endif %}
+                </h2>
+                <div class="content">
+                    {{ page.body|richtext }}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-
 {% endblock %}
 
 {% block extra_js %}

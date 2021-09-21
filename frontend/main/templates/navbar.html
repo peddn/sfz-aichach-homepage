@@ -12,28 +12,25 @@
   
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="/">
           Startseite
         </a>
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="{% slugurl 'blog' %}">
             Aktuelles
           </a>
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="{% slugurl 'schulprogramm' %}">
             Schulprogramm
           </a>
-          <a class="navbar-item" href="https://bulma.io/">
+          <a class="navbar-item" href="{% slugurl 'angebot' %}">
             Unser Angebot
           </a>
-          <a class="navbar-item" href="https://bulma.io/">
+          <a class="navbar-item" href="{% slugurl 'schueler' %}">
             Für Schüler
           </a>
-          <a class="navbar-item" href="https://bulma.io/">
-            Service
+          <a class="navbar-item" href="{% slugurl 'dienste' %}">
+            Dienste
           </a>
-          <a class="navbar-item" href="https://bulma.io/">
-            Archiv
-          </a>
-          <a class="navbar-item" href="https://bulma.io/">
+          <a class="navbar-item" href="/admin">
             Intern
           </a>
       </div>

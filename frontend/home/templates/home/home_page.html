@@ -9,28 +9,17 @@
 {% endblock %}
 
 {% block content %}
-
-{% if page.show_actual %}
-<section class="section">
-    <div class="container">
-        <div class="hero is-warning">
-            <div class="hero-body">
-                <div class="content is-medium">
-                    {{ page.actual|richtext }}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-{% endif %}
-
 <section class="section welcome">
     <div class="container is-family-secondary">
         <div class="columns">
             <div class="column is-two-fifths">
             </div>
             <div class="column">
-                <h1 class="title has-text-white-ter">Herzlich Willkommen</h1>
+                <h1 class="title has-text-white-ter">
+                    {% if page.show_welcome %}
+                        {{ page.welcome }}    
+                    {% endif %}
+                </h1>
                 <div class="content">
                     {{ page.body|richtext }}
                 </div>
@@ -38,7 +27,6 @@
         </div>
     </div>
 </section>
-
 {% endblock %}
 
 {% block extra_js %}
